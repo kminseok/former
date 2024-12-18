@@ -1,0 +1,50 @@
+{
+ "dataset": "UCR",
+ "save_path": "exp/SelfRegulationSCP1/{1..5}",
+ "UCR_folder": "SelfRegulationSCP1",
+ "data_path": "data/UCR_UEA/Multivariate_arff/",
+ "device": "cuda:0",
+ "train_batch_size": 64,
+ "test_batch_size": 64,
+ "dropout": 0.2,
+ "attn_heads": 4,
+ "eval_per_steps": 4,
+ "enable_res_parameter": 1,
+ "loss": "ce",
+ "pooling_type": "mean",
+ "save_model": 1,
+ "stages": 3,
+ "layer_per_stage": [
+  6,
+  6,
+  6
+ ],
+ "hidden_size_per_stage": [
+  64,
+  64,
+  64
+ ],
+ "slice_per_stage": [
+  2,
+  2,
+  2
+ ],
+ "stride_per_stage": [
+  2,
+  2,
+  2
+ ],
+ "tr": [
+  2,
+  2,
+  1
+ ],
+ "position_location": "top",
+ "position_type": "cond",
+ "lr": 0.001,
+ "lr_decay_rate": 1.0,
+ "lr_decay_steps": 4,
+ "weight_decay": 0.01,
+ "num_epoch": 100,
+ "num_class": 2
+}
